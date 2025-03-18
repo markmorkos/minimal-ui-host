@@ -2,15 +2,20 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Discount Function UI</title>
+  <title>Discount Function</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    button { padding: 10px 20px; font-size: 16px; }
   </style>
 </head>
 <body>
   <h1>Discount Function</h1>
+  <button type="button" onclick="handleSave()">Save</button>
+
+  <script>
+    function handleSave() {
+      window.parent.postMessage({ type: 'saveDiscount', payload: {} }, '*');
+    }
+  </script>
 </body>
 </html>
